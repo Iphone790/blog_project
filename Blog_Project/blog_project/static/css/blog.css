@@ -1,0 +1,53 @@
+ .content {
+    float: right;
+    width: 75%;
+    padding: 0 30px 0 0; /* Adjusted padding */
+}
+
+.sidebar {
+    text_align: center;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    padding: 0 0 10px; /* Removed left padding */
+}
+
+#date {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+body {
+    color: black;
+    text-align: justify;
+}
+
+.con {
+    padding: 5px;
+    margin-left: 10px;
+    float: left;
+    width: 23%;
+    background: #e3f2fd;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container{
+width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

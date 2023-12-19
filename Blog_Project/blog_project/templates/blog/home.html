@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .blog-post {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Aditya Blog</a>
+            <ul class="navbar-nav mr-auto">
+                 <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/about">About us</a>
+                 </li>
+            </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/logout">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="/accounts/login">Login</a>
+            </li>&nbsp&nbsp&nbsp
+            <li class="nav-item">
+                <a href="/signup">Signup</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<!-- Blog content -->
+<div class="container mt-4">
+    <h1>Welcome to Aditya Blog</h1>
+    <p class="lead">Where great ideas meet words!</p>
+
+    <div class="row">
+        <!-- Sample blog posts -->
+        <div class="col-md-6">
+            <div class="blog-post">
+                <h2>Post Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="blog-post">
+                <h2>Post Title 2</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
