@@ -15,7 +15,8 @@
         <form method="post">
             {{form.as_p}}
             {% csrf_token %}
-            <input type="submit" name="" value="Login" class="btn btn-lg btn-success">
+            <input type="submit" name="" value="Login" class="btn btn-lg btn-success">&nbsp
+            <a href="{% url 'signup' %}" class="btn btn-lg btn-success">Signup</a>
         </form>
 </div>
 {% endblock %}

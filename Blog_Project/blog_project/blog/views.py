@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from blog.forms import EmailSendForm, CommentForm
 from taggit.models import Tag
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
 
 
 # Create your views here.
